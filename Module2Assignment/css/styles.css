@@ -2,13 +2,20 @@
 Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively.
 Mobile view should appear only if the width of the browser is equal to or less than 767px.*/
 body {
+  display: block;
   background: #FFF0F0;
   box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+div {
   width: 100%;
 }
 
 section {
-
+  border: 1px solid;
+  box-sizing: border-box;
 }
 
 .canyon {
@@ -17,35 +24,56 @@ section {
 
 .meta {
   background: #80FF00;
-  height: auto;
+
 }
 
 .reign {
   background: #60C8A0;
-  height: auto;
 }
 
-@media (min-width: 991px) {
+p {
+  margin-top: 75px;
+}
+
+h2 {
+  float: right;
+  font-size: 175%;
+
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
   .canyon, .meta, .reign {
-    width: 33%;
+    width: 31%;
     float: left;
-    height: auto;
+    min-height: 317px;
+    margin: 10px;
   }
 }
 
  @media(min-width: 768px) and (max-width: 991px) {
    .canyon, .meta {
-     width: 50%;
+     width: 47%;
      float: left;
-     clear: right;
+     min-height: 317px;
+     margin: 10px;
    }
    .reign {
-     margin-top: 300px;
-     padding-top: 50px;
+     overflow: hidden;
      width: 100%;
+     margin: 10px;
    }
  }
 
  @media(max-width: 767px) {
-
+   .canyon, .meta, .reign {
+     width: 100%;
+     margin: 10px 0;
+   }
  }
